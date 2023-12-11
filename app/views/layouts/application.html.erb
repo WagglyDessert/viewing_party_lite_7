@@ -11,9 +11,12 @@
   </head>
 
   <body>
-      <% if flash.now[:notice] %>
-        <p><%= "#{flash.notice}" %></p>
-      <% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
+    <%if flash.now[:notice] %>
+      <p><%= "#{flash.notice}" %></p>
+    <% end %>
      <div> <%= link_to "Home", "/" %> </div>
      <h3> Viewing Party Lite </h3>
 
