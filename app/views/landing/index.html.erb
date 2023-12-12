@@ -6,8 +6,9 @@
 <p><%= button_to "Create New User", "/register", method: :get %></p><br>
 <% end %>
 
-<h3> Existing Users </h3>
-
-<% @users.each do |user| %>
-  <%= link_to user.email, "/users/#{user.id}" %><br>
+<% if current_user %>
+  <h3> Existing Users </h3>
+  <% @users.each do |user| %>
+    <%= link_to user.email, "/users/#{user.id}" %><br>
+  <% end %>
 <% end %>
