@@ -12,13 +12,14 @@ class UsersController < ApplicationController
     user = users_params
     user[:username] = user[:username].downcase
     new_user = User.create(user)
-    session[:user_id] = new_user.id
-		flash[:success] = "Welcome, #{new_user.username}!"
-    redirect_to "/users/#{new_user.id}"
-    # else
-    #   flash[:notice] = "This email or username is already registered"
-    #   redirect_to "/register"
-    # end
+    if new_user.save
+      session[:user_id] = new_user.id
+      flash[:success] = "Welcome, #{new_user.username}!"
+      redirect_to "/users/#{new_user.id}"
+    else
+      flash[:notice] = "#{new_user.errors.full_messages.join(', ')}"
+      redirect_to "/register"
+    end
   end
 
   def login_form
