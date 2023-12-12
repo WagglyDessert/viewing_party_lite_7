@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     user = users_params
     user[:username] = user[:username].downcase
     new_user = User.create(user)
+    session[:user_id] = new_user.id
 		flash[:success] = "Welcome, #{new_user.username}!"
     redirect_to "/users/#{new_user.id}"
     # else
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
   def login
     user = User.find_by(username: params[:username])
     if user.authenticate(params[:password])
+      session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.username}!"
       redirect_to "/"
     else

@@ -1,6 +1,10 @@
 
+<% if current_user %>
+  <%= link_to "Log Out" %>
+<% else %>
 <%= link_to "I already have an account", login_path %>
 <p><%= button_to "Create New User", "/register", method: :get %></p><br>
+<% end %>
 
 <h3> Existing Users </h3>
 
