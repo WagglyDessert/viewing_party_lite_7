@@ -16,9 +16,9 @@ require 'webmock/rspec'
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 def test_data
-  @user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com")
-  @user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com")
-  @user3 = User.create(name: "Jerry", email: "Moogoo@gmail.com")
+  @user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com", username: "funbucket1", password: "test")
+  @user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com", username: "funbucket2", password: "test")
+  @user3 = User.create(name: "Jerry", email: "Moogoo@gmail.com", username: "funbucket3", password: "test")
 
   # @movie1 = Movie.create(id: 2, title: "Ariel", runtime: 73, tmdb_id: 2)
   # @movie2 = Movie.create(id: 3, title: "Shadows in Paradise", runtime: 74, tmdb_id: 3)

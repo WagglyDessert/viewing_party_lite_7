@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-@user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com")
-@user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com")
-@user3 = User.create(name: "Jerry", email: "Moogoo@gmail.com")
+@user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com", username: "funbucket1", password: "test")
+@user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com", username: "funbucket2", password: "test")
+@user3 = User.create(name: "Jerry", email: "Moogoo@gmail.com", username: "funbucket3", password: "test")
 
 @movie1 = Movie.create(title: "Ariel", runtime: 73, tmdb_id: 2)
 @movie2 = Movie.create(title: "Shadows in Paradise", runtime: 74, tmdb_id: 3)

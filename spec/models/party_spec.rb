@@ -30,8 +30,8 @@ RSpec.describe Party, type: :model do
 
   describe 'tell us the host', :vcr do
     it 'tell us the host' do
-      @user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com")
-      @user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com")
+      @user1 = User.create(name: "CandyLand", email: "Bungie123@gmail.com", username: "funbucket1", password: "test")
+      @user2 = User.create(name: "Macbeth", email: "Blurp@gmail.com", username: "funbucket2", password: "test")
 
       @movie1 = Movie.create_from_api(808)
       @party1 = Party.create(duration: 200, name: "Ariel", date: "January 1, 2024", start_time: "6:00 pm", movie_id: @movie1.id)

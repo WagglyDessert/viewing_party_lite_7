@@ -42,7 +42,7 @@ RSpec.describe "User registration form" do
     expect(current_path).to eq("/register")
   end
 
-  it "will not create new user without name" do
+  it "will not create new user without email" do
     visit "/register"
     
     name = "Jiggy"
@@ -63,7 +63,8 @@ RSpec.describe "User registration form" do
     expect(current_path).to eq("/register")
   end
 
-  it "will not create new user without name" do
+  it "will not create new user without matching pw and pw-c" do
+    
     visit "/register"
     
     name = "Jiggy"
