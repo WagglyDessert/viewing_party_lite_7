@@ -26,6 +26,8 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
+      Date:
+      - Tue, 12 Dec 2023 02:21:08 GMT
       Server:
       - openresty
       X-Memc:
@@ -33,34 +35,32 @@ http_interactions:
       X-Memc-Key:
       - 57417294faa18214443f9153c21a0cc4
       X-Memc-Age:
-      - '20580'
+      - '20387'
       X-Memc-Expires:
-      - '4646'
-      Date:
-      - Fri, 01 Dec 2023 17:24:24 GMT
+      - '7807'
       Etag:
-      - W/"52fad2d2df6a4f6679100ff26675a4b2"
+      - W/"d4dea942ad024cfc8d677bf8f9d7a527"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
-      - RefreshHit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 270fdef5b99b63ae592608f44e3043b6.cloudfront.net (CloudFront)
+      - 1.1 5539e869b7b6ea60eddee5f69c9a0d9c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN52-P3
+      - DEN52-C1
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - ZrLkL57DaT9c9MNDlhPYcX81kNCk_JOTGI8VMhMGc5mNtdkbiwOYXA==
+      - E7VltZqld9zBsm7Tf3W0-EfbzBpiln7IPZNW_mp_Vu9zPs174EIMFg==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/dQL2wJZo05GDd21VgOacMeCuyZy.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":35,"name":"Comedy"},{"id":10749,"name":"Romance"},{"id":80,"name":"Crime"}],"homepage":"","id":2,"imdb_id":"tt0094675","original_language":"fi","original_title":"Ariel","overview":"After
         the coal mine he works at closes and his father commits suicide, a Finnish
         man leaves for the city to make a living but there, he is framed and imprisoned
-        for various crimes.","popularity":11.518,"poster_path":"/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg","production_companies":[{"id":2303,"logo_path":null,"name":"Villealfa
-        Filmproductions","origin_country":"FI"}],"production_countries":[{"iso_3166_1":"FI","name":"Finland"}],"release_date":"1988-10-21","revenue":0,"runtime":73,"spoken_languages":[{"english_name":"Finnish","iso_639_1":"fi","name":"suomi"}],"status":"Released","tagline":"","title":"Ariel","video":false,"vote_average":7.065,"vote_count":276}'
-  recorded_at: Fri, 01 Dec 2023 17:24:24 GMT
+        for various crimes.","popularity":19.806,"poster_path":"/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg","production_companies":[{"id":2303,"logo_path":null,"name":"Villealfa
+        Filmproductions","origin_country":"FI"}],"production_countries":[{"iso_3166_1":"FI","name":"Finland"}],"release_date":"1988-10-21","revenue":0,"runtime":73,"spoken_languages":[{"english_name":"Finnish","iso_639_1":"fi","name":"suomi"}],"status":"Released","tagline":"","title":"Ariel","video":false,"vote_average":7.046,"vote_count":282}'
+  recorded_at: Tue, 12 Dec 2023 02:21:08 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/2
@@ -87,6 +87,8 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
+      Date:
+      - Tue, 12 Dec 2023 02:21:08 GMT
       Server:
       - openresty
       X-Memc:
@@ -94,32 +96,30 @@ http_interactions:
       X-Memc-Key:
       - 57417294faa18214443f9153c21a0cc4
       X-Memc-Age:
-      - '20580'
+      - '20387'
       X-Memc-Expires:
-      - '4646'
-      Date:
-      - Fri, 01 Dec 2023 17:24:24 GMT
+      - '7807'
       Etag:
-      - W/"52fad2d2df6a4f6679100ff26675a4b2"
+      - W/"d4dea942ad024cfc8d677bf8f9d7a527"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
-      - RefreshHit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 f3ddfa13c95148b404ddbc8398e73286.cloudfront.net (CloudFront)
+      - 1.1 a7bf7cf3a377b5000ee61eea3824eb74.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - DEN52-P3
+      - DEN52-C1
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - sr5amxegmhpq-lWb469OAbdMaED54uRGg2aYstCGhzjGixOUwJv2uw==
+      - u_yBqg86uFTIc_Pbx_9iEfl4hoJNIMX3pq8rUDyOW7K9QzeDB9BhBQ==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/dQL2wJZo05GDd21VgOacMeCuyZy.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":35,"name":"Comedy"},{"id":10749,"name":"Romance"},{"id":80,"name":"Crime"}],"homepage":"","id":2,"imdb_id":"tt0094675","original_language":"fi","original_title":"Ariel","overview":"After
         the coal mine he works at closes and his father commits suicide, a Finnish
         man leaves for the city to make a living but there, he is framed and imprisoned
-        for various crimes.","popularity":11.518,"poster_path":"/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg","production_companies":[{"id":2303,"logo_path":null,"name":"Villealfa
-        Filmproductions","origin_country":"FI"}],"production_countries":[{"iso_3166_1":"FI","name":"Finland"}],"release_date":"1988-10-21","revenue":0,"runtime":73,"spoken_languages":[{"english_name":"Finnish","iso_639_1":"fi","name":"suomi"}],"status":"Released","tagline":"","title":"Ariel","video":false,"vote_average":7.065,"vote_count":276}'
-  recorded_at: Fri, 01 Dec 2023 17:24:24 GMT
+        for various crimes.","popularity":19.806,"poster_path":"/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg","production_companies":[{"id":2303,"logo_path":null,"name":"Villealfa
+        Filmproductions","origin_country":"FI"}],"production_countries":[{"iso_3166_1":"FI","name":"Finland"}],"release_date":"1988-10-21","revenue":0,"runtime":73,"spoken_languages":[{"english_name":"Finnish","iso_639_1":"fi","name":"suomi"}],"status":"Released","tagline":"","title":"Ariel","video":false,"vote_average":7.046,"vote_count":282}'
+  recorded_at: Tue, 12 Dec 2023 02:21:08 GMT
 recorded_with: VCR 6.2.0
