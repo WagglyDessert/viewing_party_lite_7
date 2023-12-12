@@ -9,6 +9,6 @@
 <% if current_user %>
   <h3> Existing Users </h3>
   <% @users.each do |user| %>
-    <%= link_to user.email, "/users/#{user.id}" %><br>
+    <%= user.email %><br>
   <% end %>
 <% end %>
