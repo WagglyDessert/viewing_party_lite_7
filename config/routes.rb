@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   post "/login", to: "users#login"
 
   get "/logout", to: "users#logout"
+
+  namespace :admin do
+    get "/dashboard", to: "dashboard#index"
+  end
 end
