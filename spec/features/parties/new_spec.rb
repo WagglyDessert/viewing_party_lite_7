@@ -6,6 +6,11 @@ RSpec.describe "New Party" do
   end
 
   it "can create a new party with all attributes", :vcr do
+    visit "/"
+    click_on "I already have an account"
+    fill_in :username, with: @user1.username
+    fill_in :password, with: @user1.password
+    click_on "Log In"
     visit "/users/#{@user1.id}/movies/808"
 
     click_button "Create Viewing Party for Shrek"
@@ -45,17 +50,36 @@ RSpec.describe "New Party" do
     expect(page).to have_content("7:00 pm")
     expect(page).to have_content("Hosting")
 
+    visit "/"
+    click_link "Log Out"
+    click_on "I already have an account"
+    fill_in :username, with: @user3.username
+    fill_in :password, with: @user3.password
+    click_on "Log In"
+
     visit "/users/#{@user3.id}"
     expect(page).to have_content("Shrek")
     expect(page).to have_content("February 1, 2024")
     expect(page).to have_content("7:00 pm")
     expect(page).to have_content("Invited")
 
+    visit "/"
+    click_link "Log Out"
+    click_on "I already have an account"
+    fill_in :username, with: @user2.username
+    fill_in :password, with: @user2.password
+    click_on "Log In"
+
     visit "/users/#{@user2.id}"
     expect(page).to_not have_content("Shrek")
   end
 
   it "can will not create a party with a duration lower than the movie runtime", :vcr do
+    visit "/"
+    click_on "I already have an account"
+    fill_in :username, with: @user1.username
+    fill_in :password, with: @user1.password
+    click_on "Log In"
     visit "/users/#{@user1.id}/movies/808/viewing-party/new"
 
     fill_in :duration, with: 80
@@ -79,6 +103,11 @@ RSpec.describe "New Party" do
   end
   
   it "can will not create a party set in the past", :vcr do
+    visit "/"
+    click_on "I already have an account"
+    fill_in :username, with: @user1.username
+    fill_in :password, with: @user1.password
+    click_on "Log In"
     visit "/users/#{@user1.id}/movies/808/viewing-party/new"
 
     fill_in :duration, with: 100
@@ -99,6 +128,11 @@ RSpec.describe "New Party" do
   end
 
   it "Only creates a new db object if it doesn't exist", :vcr do
+    visit "/"
+    click_on "I already have an account"
+    fill_in :username, with: @user1.username
+    fill_in :password, with: @user1.password
+    click_on "Log In"
     visit "/users/#{@user1.id}/movies/808/viewing-party/new"
     
     select "2024", from: "_day_1i"

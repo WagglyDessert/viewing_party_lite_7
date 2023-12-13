@@ -1,7 +1,15 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:user_id])
+    current_user
+    if @_current_user && current_user.admin?
+      @user = User.find(params[:user_id])
+    elsif @_current_user && current_user.default?
+      @user = User.find(@_current_user.id)
+    else
+      flash[:error] = "Must be logged in to view your dashboard."
+      redirect_to "/"
+    end
   end
   
   def new
@@ -30,11 +38,23 @@ class UsersController < ApplicationController
     if user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.username}!"
-      redirect_to "/"
+      if user.admin?
+        redirect_to admin_dashboard_path
+      elsif user.manager?
+        redirect_to "/"
+      elsif
+        redirect_to "/"
+      end
     else
       flash[:error] = "Sorry, your credentials are bad."
       render :login_form
     end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:success] = "You have been logged out successfully."
+    redirect_to "/"
   end
 
   private

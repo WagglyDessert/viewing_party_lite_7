@@ -26,33 +26,37 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
+      Date:
+      - Tue, 12 Dec 2023 23:57:17 GMT
       Server:
       - openresty
+      Cache-Control:
+      - public, max-age=9721
       X-Memc:
       - HIT
       X-Memc-Key:
       - 1bdde716b8ccdf3e1a1b53e3dcdef291
       X-Memc-Age:
-      - '17636'
+      - '18767'
       X-Memc-Expires:
-      - '8387'
-      Date:
-      - Tue, 12 Dec 2023 02:21:10 GMT
+      - '9721'
       Etag:
-      - W/"77984005774de5af6790b4a97df6d26f"
+      - W/"029cfe6bbff33c83cb0b9e82ba9f2387"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
-      - RefreshHit from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 402032e48d13c4b7217c7a59235bf8cc.cloudfront.net (CloudFront)
+      - 1.1 9427b8c01c70c4a2deb16eed5a2ced9c.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN52-C1
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - 1peEBC_nNyOxNyk0Iv-gQXBSQwRy78V_HDZcHyI4kJx--6oCLNossw==
+      - EV09U0Xr7SvMSD_YladpFVE579TX9xSLU2_6-8yNLUshC8NOgR5rpg==
+      Age:
+      - '260'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/sRvXNDItGlWCqtO3j6wks52FmbD.jpg","belongs_to_collection":{"id":2150,"name":"Shrek
@@ -60,11 +64,11 @@ http_interactions:
         ain''t easy bein'' green -- especially if you''re a likable (albeit smelly)
         ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches
         of a fire-breathing dragon, Shrek teams up with an unlikely compatriot --
-        a wisecracking donkey.","popularity":187.423,"poster_path":"/dyhaB19AICF7TO7CK2aD6KfymnQ.jpg","production_companies":[{"id":7,"logo_path":"/1kqoutvio9eDaQpp0l4gQoEF4Yf.png","name":"DreamWorks
+        a wisecracking donkey.","popularity":156.514,"poster_path":"/dyhaB19AICF7TO7CK2aD6KfymnQ.jpg","production_companies":[{"id":7,"logo_path":"/1kqoutvio9eDaQpp0l4gQoEF4Yf.png","name":"DreamWorks
         Pictures","origin_country":"US"},{"id":520,"logo_path":"/pU7YTI9FfrICurXpl5V9TfCO0oJ.png","name":"Pacific
         Data Images","origin_country":"US"},{"id":521,"logo_path":"/kP7t6RwGz2AvvTkvnI1uteEwHet.png","name":"DreamWorks
         Animation","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"2001-05-18","revenue":487900000,"runtime":90,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"The
         greatest fairy tale never told.","title":"Shrek","video":false,"vote_average":7.731,"vote_count":16022}'
-  recorded_at: Tue, 12 Dec 2023 02:21:10 GMT
+  recorded_at: Wed, 13 Dec 2023 00:01:37 GMT
 recorded_with: VCR 6.2.0

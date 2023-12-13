@@ -1,13 +1,14 @@
 
 <% if current_user %>
-  <%= link_to "Log Out" %>
+  <%= link_to "Log Out", logout_path %>
 <% else %>
 <%= link_to "I already have an account", login_path %>
 <p><%= button_to "Create New User", "/register", method: :get %></p><br>
 <% end %>
 
-<h3> Existing Users </h3>
-
-<% @users.each do |user| %>
-  <%= link_to user.email, "/users/#{user.id}" %><br>
+<% if current_user %>
+  <h3> Existing Users </h3>
+  <% @users.each do |user| %>
+    <%= user.email %><br>
+  <% end %>
 <% end %>

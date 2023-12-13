@@ -17,6 +17,11 @@ RSpec.describe "Show" do
     @userparty1 = UserParty.create(user_id: @user1.id, party_id: @party1.id, creator: true)
     @userparty2 = UserParty.create(user_id: @user2.id, party_id: @party1.id, creator: false)
 
+    visit "/"
+    click_on "I already have an account"
+    fill_in :username, with: @user1.username
+    fill_in :password, with: @user1.password
+    click_on "Log In"
     visit "/users/#{@user1.id}"
 
     expect(page).to have_content("#{@user1.name}'s Dashboard")
@@ -28,6 +33,13 @@ RSpec.describe "Show" do
     click_button "Discover Movies"
     expect(current_path).to eq("/users/#{@user1.id}/discover")
     
+    visit "/"
+    click_link "Log Out"
+    click_on "I already have an account"
+    fill_in :username, with: @user2.username
+    fill_in :password, with: @user3.password
+    click_on "Log In"
+
     visit "/users/#{@user2.id}"
 
     expect(page).to have_content("#{@user2.name}'s Dashboard")
