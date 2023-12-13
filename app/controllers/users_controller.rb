@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
   def show
     current_user
-    if @_current_user
+    if @_current_user && current_user.admin?
+      @user = User.find(params[:user_id])
+    elsif @_current_user && current_user.default?
       @user = User.find(@_current_user.id)
     else
       flash[:error] = "Must be logged in to view your dashboard."

@@ -1,1 +1,5 @@
-<h1>Authorized Admin</h1>
+<h3> Existing Users </h3>
+
+<% @users.each do |user| %>
+  <%= link_to user.email, "/users/#{user.id}" %><br>
+<% end %>
